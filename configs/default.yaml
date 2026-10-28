@@ -1,6 +1,6 @@
 model:
   name: "HuggingFaceTB/SmolVLM-500M-Instruct"
-  dtype: "float16"
+  dtype: "bfloat16"
   device: "auto"
 
 data:
