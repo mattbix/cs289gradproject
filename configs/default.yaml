@@ -1,0 +1,32 @@
+model:
+  name: "HuggingFaceTB/SmolVLM-500M-Instruct"
+  dtype: "float16"
+  device: "auto"
+
+data:
+  dataset: "derek-thomas/ScienceQA"
+  split: "test"
+  image_only: true
+
+sampling:
+  k: 8
+  temperature: 0.7
+  top_p: 0.95
+  max_new_tokens: 16
+
+filtering:
+  tau: 0.75
+  method: "mode"
+
+training:
+  method: "lora"
+  lora_r: 8
+  lora_alpha: 16
+  lora_dropout: 0.05
+  epochs: 1
+  batch_size: 8
+  lr: 2.0e-4
+
+eval:
+  metrics: ["accuracy"]
+  save_predictions: true

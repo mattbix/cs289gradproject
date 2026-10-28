@@ -1,0 +1,10 @@
+torch>=2.1
+transformers>=4.40
+datasets>=2.18
+accelerate>=0.29
+peft>=0.10
+pillow>=10.0
+pandas>=2.0
+numpy>=1.26
+tqdm>=4.66
+pyyaml>=6.0

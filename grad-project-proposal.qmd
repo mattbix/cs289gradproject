@@ -1,0 +1,127 @@
+---
+title: ""
+author: ""
+date: ""
+bibliography: references.bib
+citeproc: true
+format:
+  pdf:
+    pdf-engine: pdflatex
+    from: markdown+tex_math_dollars+tex_math_single_backslash
+    documentclass: article
+    papersize: letter
+    geometry:
+      - margin=1in
+    fig-format: pdf
+    fig-align: center
+    include-in-header:
+      text: |
+        \usepackage{amsmath, amssymb, amsthm}
+        \usepackage{float}
+        \usepackage{lastpage}
+        \usepackage{fancyhdr}
+        \usepackage{parskip}
+        \pagestyle{fancy}
+        \fancyhf{}
+        \fancyhead[L]{CS 289A Grad Project Proposal - Fall 2026 - Matthew Bernard}
+        \fancyhead[R]{Page \thepage\ of \pageref{LastPage}}
+        \renewcommand{\headrulewidth}{0.4pt}
+        \renewcommand{\footrulewidth}{0pt}
+        \fancypagestyle{firstpage}{%
+          \fancyhf{}%
+          \renewcommand{\headrulewidth}{0pt}%
+        }
+        \makeatletter
+        \renewcommand{\pandocbounded}[1]{#1}
+        \makeatother
+        \setcounter{secnumdepth}{0}
+    include-before-body:
+      text: |
+        \thispagestyle{firstpage}
+        \noindent
+        \fbox{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+        \vspace{2pt}
+        \makebox[\linewidth][s]{CS 289A \hfill Fall 2026}%
+        \vspace{6pt}
+        \begin{center}
+        {\Large\bfseries Grad Project Proposal}
+        \end{center}
+        \vspace{4pt}
+        \makebox[\linewidth][s]{\textit{Matthew Bernard} \hfill \textit{October 9, 2026}}%
+        \vspace{2pt}
+        \end{minipage}%
+        }
+        \vspace{1em}
+    keep-tex: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+\noindent\textbf{Honor Code.} I certify that all solutions in this document are entirely my own and that I have not looked at anyone else's solution. I have given credit to all external sources I consulted.
+
+\vspace{0.5em}
+\noindent\rule{6cm}{0.4pt}
+Matthew Bernard \hfill October 9, 2026
+
+# 1. Background
+
+**Application Domain.** Post-training of foundation models is the dominant paradigm for adapting pre-trained models to downstream tasks. Unlike pre-training, which requires massive labeled corpora, post-training uses smaller, targeted data to align model behavior. Recent surveys categorize post-training into fine-tuning, alignment, reasoning, efficiency, and integration/adaptation [@survey_posttraining]. **Unsupervised Post-Training (UPT)** is a subset in which no ground-truth labels are used---the model generates its own training signal [@survey_upt]. A central risk in UPT is *recursive error propagation*: pseudo-labels that are confidently wrong can reinforce themselves across training rounds [@survey_upt].
+
+**Overarching Goal.** We will study whether **self-consistency**---the degree to which a Vision-Language Model (VLM) produces consistent outputs across multiple stochastic samples---can serve as a reliable unsupervised post-training signal for Visual Question Answering (VQA). Concretely:
+
+> *Can we improve a VLM's VQA accuracy by post-training it on its own high-consensus outputs, without any ground-truth answers?*
+
+We follow **Path 1** (post-training a foundation model), focusing on what makes post-training work best: the choice of features (sampling strategy), data (which pseudo-labels to retain), and hyperparameters (temperature, threshold, number of rounds).
+
+# 2. Data and Resources
+
+**Data.** We will use the **ScienceQA** dataset for unsupervised prompt selection and evaluation.
+- **Features:** image + text question.
+- **Labels:** multiple-choice answers, used *only* for evaluation, never as a training signal.
+- **Samples:** approximately 12{,}000 questions.
+- **Access:** publicly available via HuggingFace Datasets.
+
+We will additionally evaluate on a held-out subset of **VQAv2** to test generalization.
+
+**Model.** We will use **SmolVLM-500M-Instruct** as the foundation model, with a fallback to **LLaVA-1.5-7B** if compute permits.
+
+**Compute.** A single GPU (A100 or L4) is sufficient. LoRA-based parameter-efficient fine-tuning keeps memory within 24\,GB; full fine-tuning is feasible for SmolVLM-500M.
+
+**Unsupervised Signal.** For each question, we sample $k$ outputs (e.g., $k=8$) at temperature $T>0$. We compute the **mode** (most frequent answer) and retain questions whose mode frequency exceeds a threshold $\tau$. The model is then fine-tuned (LoRA or full) on these self-generated pseudo-labels.
+
+# 3. Timeline
+
+| Week | Milestone | Contributions |
+|------|-----------|---------------|
+| Oct 12--18 | Environment setup; baseline zero-shot VQA evaluation on ScienceQA test set. | MB: model setup; teammate: data pipeline |
+| Oct 19--25 | Implement self-consistency sampling ($k=8$, $T=0.7$); measure baseline consistency distribution. | MB: sampling code; teammate: baseline analysis |
+| Oct 26--Nov 1 | Implement LoRA fine-tuning on self-consensus pseudo-labels; run first post-training round. | MB: training loop; teammate: data curation |
+| Nov 2--6 | Evaluate post-trained model; compare to baseline. **Progress Report due Nov 6.** | Both: evaluation and writing |
+| Nov 7--13 | Ablations: vary $k$, $\tau$, temperature, LoRA rank, training epochs. | MB: ablations; teammate: analysis |
+| Nov 14--20 | Error-propagation study: does a second post-training round help or hurt? | Both: analysis |
+| Nov 21--24 | **First Draft of Paper due Nov 24.** | Both: writing |
+| Nov 25--Dec 3 | Revise paper; prepare peer review. | MB: revisions; teammate: peer review |
+| Dec 4 | **Peer Review due Dec 4.** | --- |
+| Dec 5--11 | Final revisions based on reviews; record video. **Final Report + Video due Dec 11.** | Both: finalize |
+
+**Internal milestones.** Baseline accuracy (Oct 18), consistency--accuracy correlation plot (Oct 25), first post-trained checkpoint (Nov 1), ablation grid complete (Nov 13), error-propagation plot (Nov 20).
+
+# 4. Evaluation Plan
+
+We will report:
+
+1. **Zero-shot baseline** accuracy under greedy decoding and majority-vote decoding.
+2. **Post-trained accuracy** on the held-out test set, compared to baseline.
+3. **Pseudo-label quality** as a function of $\tau$ (consistency threshold)---a key diagnostic.
+4. **Ablation grid** over $k$, $\tau$, $T$, LoRA rank, and number of training epochs.
+5. **Error-propagation curve**: accuracy vs. number of post-training rounds.
+
+Tradeoffs and failure modes (e.g., class imbalance induced by pseudo-label filtering) will be discussed explicitly, and final design decisions justified through ablations.
+
+# 5. References
+
+::: {#refs}
+:::
