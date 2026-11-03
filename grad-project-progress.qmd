@@ -1,0 +1,142 @@
+---
+title: ""
+author: ""
+date: ""
+bibliography: references.bib
+citeproc: true
+format:
+  pdf:
+    pdf-engine: pdflatex
+    from: markdown+tex_math_dollars+tex_math_single_backslash
+    documentclass: article
+    papersize: letter
+    geometry:
+      - margin=1in
+    fig-format: pdf
+    fig-align: center
+    include-in-header:
+      text: |
+        \usepackage{amsmath, amssymb, amsthm}
+        \usepackage{float}
+        \usepackage{lastpage}
+        \usepackage{fancyhdr}
+        \usepackage{parskip}
+        \pagestyle{fancy}
+        \fancyhf{}
+        \fancyhead[L]{CS 289A Grad Project Progress - Fall 2026 - Matthew Bernard, Shiqi Yang}
+        \fancyhead[R]{Page \thepage\ of \pageref{LastPage}}
+        \renewcommand{\headrulewidth}{0.4pt}
+        \renewcommand{\footrulewidth}{0pt}
+        \fancypagestyle{firstpage}{%
+          \fancyhf{}%
+          \renewcommand{\headrulewidth}{0pt}%
+        }
+        \makeatletter
+        \renewcommand{\pandocbounded}[1]{#1}
+        \makeatother
+        \setcounter{secnumdepth}{0}
+    include-before-body:
+      text: |
+        \thispagestyle{firstpage}
+        \noindent
+        \fbox{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+        \vspace{2pt}
+        \makebox[\linewidth][s]{CS 289A \hfill Fall 2026}%
+        \vspace{6pt}
+        \begin{center}
+        {\Large\bfseries Grad Project Progress}
+        \end{center}
+        \vspace{4pt}
+        \makebox[\linewidth][s]{\textit{Matthew Bernard, Shiqi Yang} \hfill \textit{November 6, 2026}}%
+        \vspace{2pt}
+        \end{minipage}%
+        }
+        \vspace{1em}
+    keep-tex: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+# Decisions we made
+
+The Oct 28 meeting settled the project's experimental design. The relevant decisions were:
+
+| # | Decision | Options | Our lean |
+|---|----------|---------|----------|
+| 1 | Dataset | `derek-thomas/ScienceQA` (all) vs `lmms-lab/ScienceQA-IMG` (image-only) | Image-only for main experiments |
+| 2 | Softmax variant | One forward pass reading $P(A/B/C/D)$ vs $k=8$ sampling only | Both; softmax as additional variant |
+| 3 | Baselines | Oracle (ground-truth labels) + $\tau=0$ (no filtering) | Both, adopted from Shiqi's suggestion |
+| 4 | VQAv2 scope | Main / stretch / drop | Stretch (ScienceQA first) |
+
+The dataset decision was the only genuinely open item. `lmms-lab/ScienceQA-IMG` was image-only by construction (every row had an image, zero text-only), whereas `derek-thomas/ScienceQA` added the text-only half. Since the project was about a **V**LM, image-only became the main experiment and text-only a secondary analysis. The two datasets were row-for-row aligned on the image+text half, so switching between them was lossless for the vision experiments.
+
+# Progress since the meeting
+
+All six action items from the meeting were completed.
+
+| # | Action item | Owner | Status |
+|-|----|-|------|
+| 1 | Confirmed SCF GPU allocation | Matt | Done --- one NVIDIA TITAN Xp (12 GB), driver 570.124.06, CUDA 12.8. Partition `gpu` had `PreemptMode=REQUEUE`, so jobs were checkpointed. |
+| 2 | Set up Python env on SCF; confirmed SmolVLM loads | Matt | Done --- conda env `smolvlm` (Python 3.11), torch 2.14.1+cu126, transformers 5.x. SmolVLM-500M loaded at `cuda:0`, `torch.bfloat16`, 507.48M params. |
+| 3 | HF Hub repo for checkpoints | Matt | Done --- `mattbix/cs289-smolvlm-checkpoints`, with both baseline JSONLs under `baselines/`. |
+| 4 | `scripts/01_baseline_eval.py` --- zero-shot greedy on 500-question subset | Matt | Done --- results are reported below. |
+| 5 | ScienceQA counts, image+text vs. text-only, per split | Matt, Shiqi | Done --- counts are reported below; Matt ran the counts, Shiqi reviewed. |
+| 6 | SmolVLM forward-pass API notes for softmax over options | Matt, Shiqi | Done --- `scripts/02_softmax_eval.py`; Matt implemented and ran it, Shiqi reviewed. |
+
+Two notes on the infrastructure. First, the `gpu` partition's single TITAN Xp was small but sufficient: SmolVLM-500M occupied about 1.1 GB at bf16 inference, so LoRA fine-tuning fit comfortably. The real constraint was `PreemptMode=REQUEUE` --- long runs were checkpointed per example, which the baseline scripts did (JSONL append after every question). Second, the HF Hub token was stored under `$HOME` (`~/.cache/huggingface/token`), so it survived login-node changes; `HF_HOME` was exported from both `~/.bashrc` and `~/.profile` to cover interactive `srun` and `sbatch` contexts alike.
+
+# Preliminary results
+
+## Dataset counts
+
+| Dataset | Split | Total | Image+text | Text-only |
+|---|---|---:|---:|---:|
+| `lmms-lab/ScienceQA-IMG` | train | 6,218 | 6,218 | 0 |
+| | validation | 2,097 | 2,097 | 0 |
+| | test | 2,017 | 2,017 | 0 |
+| `derek-thomas/ScienceQA` | train | 12,726 | 6,218 | 6,508 |
+| | validation | 4,241 | 2,097 | 2,144 |
+| | test | 4,241 | 2,017 | 2,224 |
+
+The image+text column of `derek-thomas/ScienceQA` matched `lmms-lab/ScienceQA-IMG` row-for-row, confirming the two datasets were aligned. The main experiments therefore used `lmms-lab/ScienceQA-IMG`; the text-only rows were held out for a secondary analysis.
+
+## Baselines (500-question image-only test subset, seed 0)
+
+Both baselines were evaluated on the same 500-question random subset of `lmms-lab/ScienceQA-IMG` test, so row-by-row comparison was valid.
+
+| Variant | Accuracy | Forward passes per question |
+|---|--:|----|
+| Zero-shot greedy | 0.6480 (324/500) | 1 autoregressive decode, $\leq 8$ tokens |
+| Zero-shot softmax argmax | **0.6700** (335/500) | 1 single pass, no decode |
+
+The softmax variant was both cheaper (one forward pass versus an autoregressive decode) and slightly more accurate (+2.2 points, 11 more correct). That was the headline result of the ablation: the graded-confidence signal captured information the sampled-mode signal did not.
+
+## Ablation split (greedy vs. softmax, same 500)
+
+| Outcome | Count |
+|---|---:|
+| Agreed on predicted letter | 373 / 500 (74.6%) |
+| Both right | 276 |
+| Greedy-only right | 48 |
+| Softmax-only right | 59 |
+
+Check: $276 + 48 = 324$ (greedy total), $276 + 59 = 335$ (softmax total).
+
+The two methods disagreed on a quarter of the questions (127/500), and on those disagreements softmax was right slightly more often (59 vs 48). Neither method dominated. This supported running both as an ablation rather than choosing one: the sampling-based consistency signal and the softmax-confidence signal were complementary, not redundant. The 107 questions on which exactly one method was correct were the recoverable headroom for the consistency-filter fine-tuning stage.
+
+# Remaining work
+
+The meeting's action items were closed before the progress report was due. The remaining research milestones would proceed as follows.
+
+1. **Consistency-filter fine-tuning.** The filter at threshold $\tau$ would be implemented, and the two comparison baselines (oracle on ground-truth labels; $\tau=0$, no filtering) agreed at the meeting would be run. This was the experiment that would isolate the contribution of the filter.
+2. **SmolVLM pseudo-label generation.** The $k=8$ sampled outputs on the training split would be generated, with mode and frequency extracted, and the high-consensus subset selected.
+3. **LoRA fine-tuning.** LoRA on SmolVLM-500M at bf16 would be run; the TITAN Xp's 12 GB would be sufficient.
+4. **Post-fine-tuning evaluation.** Both baselines would be re-run on the fine-tuned model and compared against the 0.6480 / 0.6700 figures above.
+5. **Write-up.** The two baseline tables and the ablation split above would become the paper's first results section; the consistency-filter comparison would become the second.
+
+# Collaboration
+
+Repo: [github.com/mattbix/cs289gradproject](https://github.com/mattbix/cs289gradproject). Checkpoints: [huggingface.co/mattbix/cs289-smolvlm-checkpoints](https://huggingface.co/mattbix/cs289-smolvlm-checkpoints) (both baseline JSONLs were uploaded under `baselines/`). The weekly check-in cadence was as agreed at the meeting.

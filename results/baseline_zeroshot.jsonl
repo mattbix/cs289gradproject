@@ -1,0 +1,500 @@
+{"idx": 0, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 2, "pred": "B", "gold": "B", "ok": true, "raw": "B."}
+{"idx": 3, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 4, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 6, "pred": "D", "gold": "D", "ok": true, "raw": "D"}
+{"idx": 18, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 25, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 27, "pred": "A", "gold": "A", "ok": true, "raw": "A"}
+{"idx": 28, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 29, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 30, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 33, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 38, "pred": "A", "gold": "C", "ok": false, "raw": "Answer: A"}
+{"idx": 44, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 46, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 54, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 64, "pred": "D", "gold": "C", "ok": false, "raw": "Answer: D"}
+{"idx": 67, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 73, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 74, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 79, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 80, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 82, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 83, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 84, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 86, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 92, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 93, "pred": "D", "gold": "B", "ok": false, "raw": "Answer: D"}
+{"idx": 95, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 98, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 102, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 118, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 125, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 127, "pred": "A", "gold": "A", "ok": true, "raw": "A"}
+{"idx": 128, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 130, "pred": "A", "gold": "B", "ok": false, "raw": "Answer: A"}
+{"idx": 141, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 143, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 145, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 147, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 151, "pred": "D", "gold": "A", "ok": false, "raw": "Answer: D"}
+{"idx": 161, "pred": "D", "gold": "B", "ok": false, "raw": "Answer: D"}
+{"idx": 164, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 165, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 166, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 168, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 170, "pred": "B", "gold": "D", "ok": false, "raw": "Answer: B"}
+{"idx": 183, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 186, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 187, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 191, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 194, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 200, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 202, "pred": "A", "gold": "C", "ok": false, "raw": "Answer: A"}
+{"idx": 203, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 205, "pred": "A", "gold": "B", "ok": false, "raw": "Answer: A"}
+{"idx": 206, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 207, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 222, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 223, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 235, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 236, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 237, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 239, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 240, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 243, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 245, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 253, "pred": "B", "gold": "A", "ok": false, "raw": "B"}
+{"idx": 254, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 255, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 265, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 266, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 267, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 271, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 273, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 276, "pred": "C", "gold": "D", "ok": false, "raw": "Answer: C"}
+{"idx": 283, "pred": "A", "gold": "B", "ok": false, "raw": "Answer: A"}
+{"idx": 285, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 286, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 291, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 299, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 300, "pred": "B", "gold": "A", "ok": false, "raw": "B."}
+{"idx": 306, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 309, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 314, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 316, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 322, "pred": "D", "gold": "B", "ok": false, "raw": "Answer: D"}
+{"idx": 324, "pred": "A", "gold": "B", "ok": false, "raw": "Answer: A"}
+{"idx": 327, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 331, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 335, "pred": "D", "gold": "D", "ok": true, "raw": "D"}
+{"idx": 339, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 346, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 349, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 358, "pred": "D", "gold": "C", "ok": false, "raw": "Answer: D"}
+{"idx": 365, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 367, "pred": "B", "gold": "C", "ok": false, "raw": "Answer: B"}
+{"idx": 369, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 373, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 376, "pred": "B", "gold": "C", "ok": false, "raw": "Answer: B"}
+{"idx": 378, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 382, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 385, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 386, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 387, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 389, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 390, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 391, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 393, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 398, "pred": "D", "gold": "A", "ok": false, "raw": "Answer: D"}
+{"idx": 406, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 408, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 416, "pred": "A", "gold": "A", "ok": true, "raw": "A"}
+{"idx": 418, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 421, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 425, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 431, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 437, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 440, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 447, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 448, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 451, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 452, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 454, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 456, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 482, "pred": "A", "gold": "B", "ok": false, "raw": "Answer: A"}
+{"idx": 488, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 490, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 491, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 495, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 497, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 499, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 513, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 525, "pred": "B", "gold": "A", "ok": false, "raw": "B."}
+{"idx": 530, "pred": "B", "gold": "A", "ok": false, "raw": "B."}
+{"idx": 531, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 532, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 533, "pred": "A", "gold": "A", "ok": true, "raw": "A"}
+{"idx": 552, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 555, "pred": "A", "gold": "A", "ok": true, "raw": "A"}
+{"idx": 562, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 563, "pred": "D", "gold": "D", "ok": true, "raw": "D"}
+{"idx": 564, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 570, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 573, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 575, "pred": "C", "gold": "A", "ok": false, "raw": "C"}
+{"idx": 577, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 589, "pred": "D", "gold": "A", "ok": false, "raw": "Answer: D"}
+{"idx": 592, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 594, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 596, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 600, "pred": "A", "gold": "C", "ok": false, "raw": "Answer: A"}
+{"idx": 612, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 616, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 617, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 619, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 621, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 630, "pred": "D", "gold": "A", "ok": false, "raw": "Answer: D"}
+{"idx": 635, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 637, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 639, "pred": "B", "gold": "C", "ok": false, "raw": "Answer: B"}
+{"idx": 644, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 647, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 649, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 655, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 664, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 666, "pred": "B", "gold": "C", "ok": false, "raw": "Answer: B"}
+{"idx": 667, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 672, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 676, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 681, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 682, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 684, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 686, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 687, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 691, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 692, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 701, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 710, "pred": "D", "gold": "B", "ok": false, "raw": "D."}
+{"idx": 717, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 721, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 724, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 731, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 733, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 734, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 735, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 739, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 751, "pred": "A", "gold": "A", "ok": true, "raw": "A. Both fought in the French and"}
+{"idx": 752, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 758, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 761, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 762, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 769, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 775, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 788, "pred": "D", "gold": "A", "ok": false, "raw": "Answer: D"}
+{"idx": 794, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 795, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 801, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 808, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 812, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 816, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 822, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 823, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 825, "pred": "D", "gold": "D", "ok": true, "raw": "D"}
+{"idx": 829, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 839, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 848, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 849, "pred": "B", "gold": "A", "ok": false, "raw": "B"}
+{"idx": 850, "pred": "A", "gold": "A", "ok": true, "raw": "A"}
+{"idx": 855, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 856, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 858, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 861, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 871, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 872, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 889, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 891, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 893, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 905, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 906, "pred": "E", "gold": "E", "ok": true, "raw": "Answer: E"}
+{"idx": 911, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 912, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 914, "pred": "B", "gold": "A", "ok": false, "raw": "B"}
+{"idx": 917, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 922, "pred": "A", "gold": "A", "ok": true, "raw": "A"}
+{"idx": 927, "pred": "B", "gold": "A", "ok": false, "raw": "B"}
+{"idx": 937, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 939, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 956, "pred": "A", "gold": "A", "ok": true, "raw": "A."}
+{"idx": 963, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 965, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 966, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 974, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 975, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 976, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 979, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 981, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 985, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 986, "pred": "A", "gold": "B", "ok": false, "raw": "Answer: A"}
+{"idx": 995, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 996, "pred": "B", "gold": "D", "ok": false, "raw": "Answer: B"}
+{"idx": 997, "pred": "A", "gold": "B", "ok": false, "raw": "A."}
+{"idx": 1002, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1008, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 1010, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1012, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1031, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1033, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1040, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1041, "pred": "B", "gold": "A", "ok": false, "raw": "B"}
+{"idx": 1047, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1066, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1067, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1068, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1071, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1074, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1080, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1082, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1084, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1090, "pred": "B", "gold": "B", "ok": true, "raw": "B."}
+{"idx": 1094, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1101, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 1106, "pred": "A", "gold": "C", "ok": false, "raw": "Answer: A"}
+{"idx": 1107, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1112, "pred": "D", "gold": "B", "ok": false, "raw": "Answer: D"}
+{"idx": 1114, "pred": "D", "gold": "D", "ok": true, "raw": "D"}
+{"idx": 1120, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1121, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1123, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1128, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 1131, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 1143, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1146, "pred": "A", "gold": "B", "ok": false, "raw": "Answer: A"}
+{"idx": 1148, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1149, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1162, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 1163, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1165, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1166, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 1175, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1178, "pred": "D", "gold": "B", "ok": false, "raw": "D"}
+{"idx": 1179, "pred": "C", "gold": "D", "ok": false, "raw": "Answer: C"}
+{"idx": 1187, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1194, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1202, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1203, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1207, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1208, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1217, "pred": "C", "gold": "D", "ok": false, "raw": "C."}
+{"idx": 1221, "pred": "D", "gold": "D", "ok": true, "raw": "D"}
+{"idx": 1222, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1232, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1233, "pred": "D", "gold": "D", "ok": true, "raw": "D"}
+{"idx": 1235, "pred": "C", "gold": "A", "ok": false, "raw": "C"}
+{"idx": 1236, "pred": "D", "gold": "D", "ok": true, "raw": "D"}
+{"idx": 1240, "pred": "D", "gold": "C", "ok": false, "raw": "D"}
+{"idx": 1241, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 1244, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1245, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1249, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1251, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1253, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1254, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1266, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 1270, "pred": "A", "gold": "B", "ok": false, "raw": "Answer: A"}
+{"idx": 1271, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1280, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1285, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 1290, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1296, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1297, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1298, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1300, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1305, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1311, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1313, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1319, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1320, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1324, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 1329, "pred": "B", "gold": "B", "ok": true, "raw": "B. each battery . . . the"}
+{"idx": 1332, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1338, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1342, "pred": "D", "gold": "A", "ok": false, "raw": "Answer: D"}
+{"idx": 1344, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1346, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1352, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 1356, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1363, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1368, "pred": "B", "gold": "C", "ok": false, "raw": "B"}
+{"idx": 1377, "pred": "A", "gold": "A", "ok": true, "raw": "A"}
+{"idx": 1379, "pred": "D", "gold": "D", "ok": true, "raw": "D"}
+{"idx": 1383, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1384, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1389, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1390, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 1391, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1393, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1394, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 1395, "pred": "B", "gold": "B", "ok": true, "raw": "B."}
+{"idx": 1399, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1400, "pred": "A", "gold": "C", "ok": false, "raw": "Answer: A"}
+{"idx": 1410, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1414, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1428, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1430, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1432, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 1434, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1436, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1437, "pred": "A", "gold": "A", "ok": true, "raw": "A"}
+{"idx": 1441, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1444, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1447, "pred": "A", "gold": "B", "ok": false, "raw": "Answer: A"}
+{"idx": 1452, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1454, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 1458, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 1465, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1469, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1470, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 1471, "pred": "C", "gold": "D", "ok": false, "raw": "Answer: C"}
+{"idx": 1473, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 1485, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 1489, "pred": "D", "gold": "D", "ok": true, "raw": "D"}
+{"idx": 1492, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1494, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1495, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1496, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1498, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1513, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1518, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1532, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1534, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1545, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1547, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1551, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 1552, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1560, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 1571, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1581, "pred": "A", "gold": "A", "ok": true, "raw": "A"}
+{"idx": 1585, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1589, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1603, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1605, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 1607, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1609, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 1615, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1624, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1627, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1634, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1637, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1639, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1641, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1644, "pred": "D", "gold": "D", "ok": true, "raw": "D"}
+{"idx": 1645, "pred": "B", "gold": "A", "ok": false, "raw": "B"}
+{"idx": 1648, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1651, "pred": "B", "gold": "A", "ok": false, "raw": "B"}
+{"idx": 1659, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1661, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1662, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1668, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1670, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1673, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1681, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1682, "pred": "D", "gold": "D", "ok": true, "raw": "D"}
+{"idx": 1689, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1690, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1692, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1695, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1698, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1699, "pred": "B", "gold": "C", "ok": false, "raw": "Answer: B"}
+{"idx": 1700, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1707, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1710, "pred": "A", "gold": "B", "ok": false, "raw": "Answer: A"}
+{"idx": 1711, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1715, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 1716, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1720, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1725, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1729, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1730, "pred": "A", "gold": "B", "ok": false, "raw": "Answer: A"}
+{"idx": 1731, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 1739, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1741, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 1744, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1751, "pred": "A", "gold": "B", "ok": false, "raw": "Answer: A"}
+{"idx": 1755, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 1766, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1769, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1771, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1772, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 1774, "pred": "D", "gold": "C", "ok": false, "raw": "Answer: D"}
+{"idx": 1776, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1782, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1783, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1786, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1790, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1792, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1795, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1805, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1808, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1812, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1823, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1824, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1826, "pred": "D", "gold": "E", "ok": false, "raw": "Answer: D"}
+{"idx": 1831, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1833, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1837, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 1839, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1840, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1847, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1849, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1858, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1859, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1860, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1863, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1864, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 1868, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 1869, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1875, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1877, "pred": "A", "gold": "A", "ok": true, "raw": "A."}
+{"idx": 1878, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1879, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 1880, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1881, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1882, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 1888, "pred": "A", "gold": "B", "ok": false, "raw": "Answer: A"}
+{"idx": 1890, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 1891, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1892, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1894, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 1899, "pred": "C", "gold": "B", "ok": false, "raw": "Answer: C"}
+{"idx": 1903, "pred": "A", "gold": "A", "ok": true, "raw": "A"}
+{"idx": 1907, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1910, "pred": "B", "gold": "C", "ok": false, "raw": "Answer: B"}
+{"idx": 1916, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 1918, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1925, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1934, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1938, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 1944, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1948, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1951, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 1954, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1962, "pred": "C", "gold": "C", "ok": true, "raw": "C"}
+{"idx": 1963, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1965, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1968, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1975, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1977, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
+{"idx": 1978, "pred": "C", "gold": "C", "ok": true, "raw": "Answer: C"}
+{"idx": 1982, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1983, "pred": "A", "gold": "A", "ok": true, "raw": "Answer: A"}
+{"idx": 1986, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 1987, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 1990, "pred": "D", "gold": "D", "ok": true, "raw": "Answer: D"}
+{"idx": 1998, "pred": "C", "gold": "A", "ok": false, "raw": "Answer: C"}
+{"idx": 2000, "pred": "B", "gold": "A", "ok": false, "raw": "B"}
+{"idx": 2010, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 2013, "pred": "B", "gold": "B", "ok": true, "raw": "Answer: B"}
+{"idx": 2015, "pred": "B", "gold": "B", "ok": true, "raw": "B"}
+{"idx": 2016, "pred": "B", "gold": "A", "ok": false, "raw": "Answer: B"}
