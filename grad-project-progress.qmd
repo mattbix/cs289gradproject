@@ -81,7 +81,7 @@ The experimental design is as follows: image-only ScienceQA (`lmms-lab/ScienceQA
 | ScienceQA counts, image+text vs. text-only, per split | Matt, Shiqi | Done --- Matt ran, Shiqi independently reproduced |
 | Softmax-over-options API notes | Matt, Shiqi | Done --- `02_softmax_eval.py`; Shiqi's check found the read-position issue |
 
-Two infrastructure notes. The proposal assumed an A100 or L4 (24 GB); the available GPU was a single TITAN Xp (12 GB), and SmolVLM-500M's ~1.1 GB bf16 footprint meant LoRA fit comfortably, so the proposal's assumption did not need to be met. The `PreemptMode=REQUEUE` partition required per-example checkpointing, which both baseline scripts did (JSONL append after every question); and the HF Hub token, stored under `$HOME`, survived login-node changes, with `HF_HOME` exported from `~/.bashrc` and `~/.profile` to cover both `srun` and `sbatch`.
+Two infrastructure notes. The proposal assumed an A100 or L4 (24 GB); the available GPU was a single TITAN Xp (12 GB), and SmolVLM-500M's ~1.1 GB bf16 footprint meant LoRA fit comfortably, so the proposal's assumption did not need to be met. The `PreemptMode=REQUEUE` partition required per-example checkpointing, which both baseline scripts did (JSONL append after every question); and the HF Hub token, stored under `$HOME`, survived login-node changes, with `HF_HOME` exported from `~/.bashrc` and `~/.profile` to cover both `srun` and `sbatch`. The proposal scheduled the baseline evaluation for Oct 12--18 and the first LoRA round for Oct 26--Nov 1; both slipped --- the baseline to Nov 3, the LoRA round to after Nov 6, since fine-tuning depended on the consistency distribution that the baseline measured first.
 
 # Preliminary results
 
@@ -124,6 +124,6 @@ The initial softmax script read the answer distribution at the last position of 
 
 Beyond the timeline above: the corrected softmax full-500 run (optional), the $k=8$ sampled-mode baseline, the consistency-filter fine-tuning with oracle and $\tau=0$ comparisons, SmolVLM pseudo-label generation on the training split, LoRA fine-tuning with validation-tuning and held-out test evaluation, and the post-fine-tuning re-run of both baselines. The single SCF TITAN Xp was sufficient for SmolVLM-500M inference and LoRA fine-tuning; the course's \$300 in Databricks credits were identified as a backup for longer runs or parallelism if the SCF partition became contended.
 
-**Paper outline:** [outline.pdf](https://github.com/mattbix/cs289gradproject/blob/main/outline.pdf)
+**Paper outline:** [outline.pdf](https://github.com/mattbix/cs289gradproject/blob/main/grad-project-outline.pdf)
 
 **Code:** [github.com/mattbix/cs289gradproject](https://github.com/mattbix/cs289gradproject). Shiqi's independent checks are on the [`shiqi/independent-checks`](https://github.com/mattbix/cs289gradproject/tree/shiqi/independent-checks) branch, with notes in [`notes/softmax_api_notes.md`](https://github.com/mattbix/cs289gradproject/blob/shiqi/independent-checks/notes/softmax_api_notes.md). Checkpoints: [huggingface.co/mattbix/cs289-smolvlm-checkpoints](https://huggingface.co/mattbix/cs289-smolvlm-checkpoints).

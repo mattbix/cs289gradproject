@@ -74,6 +74,28 @@ subsections below mirror the progress report's structure and the proposal's
 evaluation plan. Notes in comments are for us to fill in as the work progresses.
 
 \needspace{5\baselineskip}
+# Abstract
+
+<!--
+One-paragraph summary: task (unsupervised post-training of a VLM on
+self-consistency pseudo-labels for VQA), method (k=8 sampling, consistency
+filter at threshold tau, LoRA fine-tuning of SmolVLM-500M), dataset
+(ScienceQA image-only), and the headline result (zero-shot greedy baseline
+0.6480; fine-tuning and ablation results to be added).
+-->
+
+\needspace{5\baselineskip}
+# Background
+
+<!--
+Unsupervised Post-Training (UPT): no ground-truth labels; the model generates
+its own training signal. Recursive error propagation is the central risk.
+Self-consistency as the unsupervised signal: mode frequency across k samples.
+Overarching question: can a VLM's VQA accuracy be improved by post-training it
+on its own high-consensus outputs, without ground-truth answers?
+-->
+
+\needspace{5\baselineskip}
 # Introduction
 
 <!--
@@ -187,6 +209,10 @@ LoRA on SmolVLM-500M at bf16; validation for tuning, test for final eval.
 ### Against Greedy Baseline
 
 ### Against Oracle and \(\tau=0\)
+
+## Comparison with Prior Work
+
+<!-- Compare against published ScienceQA numbers and VLM baselines. -->
 
 ## Pseudo-Label Quality
 
