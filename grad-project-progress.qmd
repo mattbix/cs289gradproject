@@ -124,6 +124,6 @@ The initial softmax script read the answer distribution at the last position of 
 
 Beyond the timeline above: the corrected softmax full-500 run (optional), the $k=8$ sampled-mode baseline, the consistency-filter fine-tuning with oracle and $\tau=0$ comparisons, SmolVLM pseudo-label generation on the training split, LoRA fine-tuning with validation-tuning and held-out test evaluation, and the post-fine-tuning re-run of both baselines. The single SCF TITAN Xp was sufficient for SmolVLM-500M inference and LoRA fine-tuning; the course's \$300 in Databricks credits were identified as a backup for longer runs or parallelism if the SCF partition became contended.
 
-**Paper outline:** <https://www.overleaf.com/project/6aebbb44c7795cf8a52f920b>
+**Paper outline:** [outline.pdf](https://github.com/mattbix/cs289gradproject/blob/main/outline.pdf)
 
 **Code:** [github.com/mattbix/cs289gradproject](https://github.com/mattbix/cs289gradproject). Shiqi's independent checks are on the [`shiqi/independent-checks`](https://github.com/mattbix/cs289gradproject/tree/shiqi/independent-checks) branch, with notes in [`notes/softmax_api_notes.md`](https://github.com/mattbix/cs289gradproject/blob/shiqi/independent-checks/notes/softmax_api_notes.md). Checkpoints: [huggingface.co/mattbix/cs289-smolvlm-checkpoints](https://huggingface.co/mattbix/cs289-smolvlm-checkpoints).
