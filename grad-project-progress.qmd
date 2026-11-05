@@ -126,4 +126,4 @@ Beyond the timeline above: the corrected softmax full-500 run (optional), the $k
 
 **Paper outline:** <https://www.overleaf.com/project/6aebbb44c7795cf8a52f920b>
 
-**Code:** [github.com/mattbix/cs289gradproject](https://github.com/mattbix/cs289gradproject). Shiqi's independent checks are on the [`shiqi/independent-checks`](https://github.com/mattbix/cs289gradproject/tree/shiqi/independent-checks) branch, with notes in `notes/softmax_api_notes.md`. Checkpoints: [huggingface.co/mattbix/cs289-smolvlm-checkpoints](https://huggingface.co/mattbix/cs289-smolvlm-checkpoints).
+**Code:** [github.com/mattbix/cs289gradproject](https://github.com/mattbix/cs289gradproject). Shiqi's independent checks are on the [`shiqi/independent-checks`](https://github.com/mattbix/cs289gradproject/tree/shiqi/independent-checks) branch, with notes in [`notes/softmax_api_notes.md`](https://github.com/mattbix/cs289gradproject/blob/shiqi/independent-checks/notes/softmax_api_notes.md). Checkpoints: [huggingface.co/mattbix/cs289-smolvlm-checkpoints](https://huggingface.co/mattbix/cs289-smolvlm-checkpoints).
