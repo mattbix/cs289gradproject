@@ -1,0 +1,208 @@
+---
+title: ""
+author: ""
+date: ""
+bibliography: references.bib
+citeproc: true
+format:
+  pdf:
+    pdf-engine: pdflatex
+    from: markdown+tex_math_dollars+tex_math_single_backslash
+    documentclass: article
+    papersize: letter
+    geometry:
+      - margin=1in
+    fig-format: pdf
+    fig-align: center
+    include-in-header:
+      text: |
+        \usepackage{amsmath, amssymb, amsthm}
+        \usepackage{float}
+        \usepackage{lastpage}
+        \usepackage{fancyhdr}
+        \usepackage{parskip}
+        \usepackage{hyperref}
+        \usepackage{xurl}
+        \usepackage{needspace}
+        \hypersetup{
+          colorlinks=true,
+          linkcolor=blue,
+          urlcolor=blue,
+          citecolor=blue,
+        }
+        \pagestyle{fancy}
+        \fancyhf{}
+        \fancyhead[L]{CS 289A Grad Project Outline - Fall 2026 - Matthew Bernard, Shiqi Yang}
+        \fancyhead[R]{Page \thepage\ of \pageref{LastPage}}
+        \renewcommand{\headrulewidth}{0.4pt}
+        \renewcommand{\footrulewidth}{0pt}
+        \fancypagestyle{firstpage}{%
+          \fancyhf{}%
+          \renewcommand{\headrulewidth}{0pt}%
+        }
+        \makeatletter
+        \renewcommand{\pandocbounded}[1]{#1}
+        \makeatother
+        \setcounter{secnumdepth}{0}
+    include-before-body:
+      text: |
+        \thispagestyle{firstpage}
+        \noindent
+        \fbox{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+        \vspace{2pt}
+        \makebox[\linewidth][s]{CS 289A \hfill Fall 2026}%
+        \vspace{6pt}
+        \begin{center}
+        {\Large\bfseries Grad Project Outline}
+        \end{center}
+        \vspace{4pt}
+        \makebox[\linewidth][s]{\textit{Matthew Bernard, Shiqi Yang} \hfill \textit{November 6, 2026}}%
+        \vspace{2pt}
+        \end{minipage}%
+        }
+        \vspace{1em}
+    keep-tex: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+This document is the shared outline for the final report. Sections and
+subsections below mirror the progress report's structure and the proposal's
+evaluation plan. Notes in comments are for us to fill in as the work progresses.
+
+\needspace{5\baselineskip}
+# Introduction
+
+<!--
+Motivation: unsupervised post-training, recursive error propagation, VLM VQA.
+Overarching question: can self-consistency be a reliable unsupervised
+post-training signal for VQA?
+-->
+
+\needspace{5\baselineskip}
+# Related Work
+
+## Post-Training of Foundation Models
+
+## Unsupervised Post-Training
+
+## Self-Consistency and Pseudo-Labeling
+
+## Visual Question Answering
+
+\needspace{5\baselineskip}
+# Data
+
+## ScienceQA
+
+<!--
+Image-only main split (lmms-lab/ScienceQA-IMG): 6,218 / 2,097 / 2,017.
+Text-only secondary split (derek-thomas/ScienceQA): adds ~6,508 / 2,144 / 2,224.
+Row alignment between the two datasets.
+-->
+
+## VQAv2 (Stretch Goal)
+
+## Dataset Splits and Preprocessing
+
+<!--
+Validation for tuning, test held out for final evaluation.
+-->
+
+\needspace{5\baselineskip}
+# Methods
+
+## SmolVLM-500M-Instruct
+
+## Self-Consistency Sampling
+
+### Sampling Parameters
+
+<!-- k = 8, temperature T > 0. -->
+
+### Mode and Frequency Extraction
+
+## Consistency Filter
+
+<!-- Threshold tau; retained high-consensus pseudo-labels. -->
+
+## Softmax-over-Options Variant
+
+### Read Position
+
+<!--
+Prefill " Answer:" in the assistant turn; read P(A/B/C/D) at the position
+after that.
+The initial read position (last input token) was found to be wrong;
+documented as a revision.
+-->
+
+### Probability Normalization
+
+## LoRA Fine-Tuning
+
+<!--
+LoRA on SmolVLM-500M at bf16; validation for tuning, test for final eval.
+-->
+
+\needspace{5\baselineskip}
+# Experiments
+
+## Baselines
+
+### Zero-Shot Greedy
+
+<!-- 0.6480 (324/500). -->
+
+### Corrected Softmax
+
+<!-- Agreement rate with greedy; full-500 run optional. -->
+
+### Sampled-Mode (\(k=8\))
+
+<!-- To be run. -->
+
+### Oracle and \(\tau=0\) Fine-Tuning Comparisons
+
+<!-- Planned; isolate the contribution of the consistency filter. -->
+
+## Ablations
+
+<!-- k, tau, T, LoRA rank, training epochs. -->
+
+## Error-Propagation Study
+
+<!-- Accuracy vs. number of post-training rounds. -->
+
+\needspace{5\baselineskip}
+# Results and Discussion
+
+## Baseline Results
+
+## Post-Fine-Tuning Results
+
+### Against Greedy Baseline
+
+### Against Oracle and \(\tau=0\)
+
+## Pseudo-Label Quality
+
+## Error Propagation
+
+\needspace{5\baselineskip}
+# Limitations and Threats to Validity
+
+<!--
+Single GPU, single model, single dataset for main experiments;
+hint field not used; VQAv2 stretch only.
+-->
+
+\needspace{5\baselineskip}
+# Conclusion
+
+# References
+
+<!-- references.bib to be merged into the final paper. -->
